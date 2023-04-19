@@ -22,5 +22,8 @@ export const store = configureStore({
         ignoredActionPaths: ['meta.arg', 'meta.baseQueryMeta', 'payload.trade'],
         ignoredPaths: [routing.reducerPath],
       },
+      immutableCheck: {
+        ignoredPaths: [routing.reducerPath],
+      },
     }).concat(routing.middleware),
 })
